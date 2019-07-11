@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F547147B-0969-4B15-A23B-8112EDFB2606}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Studiepad</RootNamespace>
+    <AssemblyName>Studiepad</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\DataAccess.cs" />
+    <Compile Include="GUI\EditSubscribedModules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditSubscribedModules.Designer.cs">
+      <DependentUpon>EditSubscribedModules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ApprovedSubscriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ApprovedSubscriptions.Designer.cs">
+      <DependentUpon>ApprovedSubscriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OverviewStudyCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OverviewStudyCourse.Designer.cs">
+      <DependentUpon>OverviewStudyCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RegisterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RegisterPage.Designer.cs">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReportDataView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReportDataView.Designer.cs">
+      <DependentUpon>ReportDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReportOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReportOverview.Designer.cs">
+      <DependentUpon>ReportOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\StudentInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\StudentInformation.Designer.cs">
+      <DependentUpon>StudentInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\StudentOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\StudentOverview.Designer.cs">
+      <DependentUpon>StudentOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SubscriptionOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SubscriptionOverview.Designer.cs">
+      <DependentUpon>SubscriptionOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Faculty.cs" />
+    <Compile Include="Logic\Report.cs" />
+    <Compile Include="Logic\Module.cs" />
+    <Compile Include="Logic\Person.cs" />
+    <Compile Include="Logic\Student.cs" />
+    <Compile Include="Logic\StudyCoach.cs" />
+    <Compile Include="Logic\StudyCourse.cs" />
+    <Compile Include="Logic\Teamleader.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\EditSubscribedModules.resx">
+      <DependentUpon>EditSubscribedModules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ApprovedSubscriptions.resx">
+      <DependentUpon>ApprovedSubscriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OverviewStudyCourse.resx">
+      <DependentUpon>OverviewStudyCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RegisterPage.resx">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReportDataView.resx">
+      <DependentUpon>ReportDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReportOverview.resx">
+      <DependentUpon>ReportOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\StudentInformation.resx">
+      <DependentUpon>StudentInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\StudentOverview.resx">
+      <DependentUpon>StudentOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SubscriptionOverview.resx">
+      <DependentUpon>SubscriptionOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
